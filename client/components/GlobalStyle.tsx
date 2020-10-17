@@ -20,7 +20,7 @@ const GlobalStyle = createGlobalStyle<ThemeProps<any>>`
   body {
     margin: 0;
     padding: 0;
-    color: ${props => props.theme.colors.mainText};
+    color: ${props => props.theme.colors.mainFontColor};
     overflow-x: hidden; 
   }
   
