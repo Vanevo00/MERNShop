@@ -7,16 +7,18 @@ const FooterContainer = styled.footer`
   color: ${props => props.theme.colors.mainLightFontColor};
   display: flex;
   justify-content: space-between;
+  padding: 0px 100px;
 `
 
 const Column = styled.div`
-  padding: 5px;
-  margin: 10px;
+  padding: 5px 10px;
+  margin: 10px 20px;
+  width: 100rem;
 `
 
 const Logo = styled.img`
   width: 50%;
-  padding: 5px 0px;
+  padding: 5px 0px 10px 0px;
 `
 
 const Menu = styled.div`
@@ -24,7 +26,7 @@ const Menu = styled.div`
 
 const MenuItem = styled.a`
   color: inherit;
-  padding: 5px;
+  padding: 5px 10px;
   border-color: ${props => props.theme.colors.mainLightFontColor};
   border-right-style: solid;
 `
@@ -37,7 +39,7 @@ const Copyright = styled.p`
 
 const ContactItem = styled.div`
   display: flex;
-  justify-content: space-between;
+  margin: 0px 20px;
 `
 
 const Circle = styled.div`
@@ -56,18 +58,17 @@ const Icon = styled.i`
 `
 
 const CircleInfo = styled.p`
-  padding: 5px;
+  padding: 5px 10px;
 `
 
 const SquareButton = styled.button`
   border-radius: 5px;
   border: none;
-  margin: 5px;
+  margin: 5px 20px;
 `
 
 const Map = styled.img`
   width: 100%;
-  height: 200;
 `
 
 
@@ -92,7 +93,7 @@ const Footer = () => {
           <Circle><Icon className='fas fa-map-marker-alt'/></Circle>
           <CircleInfo>Pražská 164<br/>280 02 Kolín</CircleInfo>
         </ContactItem>
-        <Map src='https://www.google.com/maps/place/Pra%C5%BEsk%C3%A1+164,+Kol%C3%ADn+I,+280+02+Kol%C3%ADn/@50.0284553,15.1980657,18z/data=!4m5!3m4!1s0x470c1520e6fefded:0x3b0e02eea7bfcef7!8m2!3d50.0284519!4d15.1988328'alt='Mapa'></Map>    
+        <Map src=''alt='Mapa'></Map>    
       </Column>
       <Column>
         <ContactItem>
