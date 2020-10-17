@@ -30,13 +30,14 @@ const MenuItem = styled.a`
 `
 
 const Copyright = styled.p`
-  padding: 5px 0px;
+  padding: 10px 0px;
   margin: 5px;
+  font-size: 15px;
 `
 
 const ContactItem = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 `
 
 const Circle = styled.div`
@@ -47,20 +48,26 @@ const Circle = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 5px 5px;
+  margin: 5px 0px;
 `
 
 const Icon = styled.i`
-  color: ${props => props.theme.colors.main}
+  color: ${props => props.theme.colors.main};
 `
 
 const CircleInfo = styled.p`
+  padding: 5px;
 `
 
 const SquareButton = styled.button`
+  border-radius: 5px;
+  border: none;
+  margin: 5px;
 `
 
 const Map = styled.img`
+  width: 100%;
+  height: 200;
 `
 
 
@@ -85,7 +92,7 @@ const Footer = () => {
           <Circle><Icon className='fas fa-map-marker-alt'/></Circle>
           <CircleInfo>Pražská 164<br/>280 02 Kolín</CircleInfo>
         </ContactItem>
-        <Map src=''alt='Mapa'></Map>    
+        <Map src='https://www.google.com/maps/place/Pra%C5%BEsk%C3%A1+164,+Kol%C3%ADn+I,+280+02+Kol%C3%ADn/@50.0284553,15.1980657,18z/data=!4m5!3m4!1s0x470c1520e6fefded:0x3b0e02eea7bfcef7!8m2!3d50.0284519!4d15.1988328'alt='Mapa'></Map>    
       </Column>
       <Column>
         <ContactItem>
@@ -96,8 +103,8 @@ const Footer = () => {
           <Circle><Icon className='fas fa-envelope'/></Circle>
           <CircleInfo>info@zlatnictvivanek.cz</CircleInfo>
         </ContactItem>
-        <SquareButton><Icon className='fab fa-facebook-f fa-lg'/></SquareButton>
-        <SquareButton><Icon className='fab fa-instagram fa-lg'/></SquareButton>
+        <SquareButton><Icon className='fab fa-facebook-f fa-2x'/></SquareButton>
+        <SquareButton><Icon className='fab fa-instagram fa-2x'/></SquareButton>
       </Column>
     </FooterContainer>
   )
