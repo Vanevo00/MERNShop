@@ -1,5 +1,7 @@
 export default {
   colors: {
-    mainText: '#8d2254'
+    main: '#002155',
+    mainFontColor: '#002155',
+    mainLightFontColor: '#fff'
   }
 }
