@@ -6,11 +6,11 @@ const GlobalStyle = createGlobalStyle<ThemeProps<any>>`
   }
   
   html {
-    font-family: 'Roboto', sans-serif;
+    font-family: ${props => props.theme.fonts.default};
   }
   
   input {
-    font-family: 'Roboto', sans-serif;
+    font-family: ${props => props.theme.fonts.default};
   }
   
   a {
