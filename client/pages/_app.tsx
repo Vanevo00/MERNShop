@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import { ThemeProvider } from 'styled-components'
 import GlobalStyle from '../components/GlobalStyle'
-import theme from '../components/ThemeProvider'
+import theme from '../common/constants/theme'
 
 import type { AppProps } from 'next/app'
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import MenuTexts from '../molecules/MenuTexts'
+import MenuIcons from '../molecules/MenuIcons'
 
 const HeaderContainer = styled.header`
   width: 100%;
@@ -12,12 +13,8 @@ const HeaderContainer = styled.header`
 
 const Logo = styled.img`
   margin-top: -7px;
-  margin-right: 4rem;
+  margin-right: 6rem;
 `
-
-const MenuIcons = styled.div``
-
-
 
 const Header = () => {
   return (

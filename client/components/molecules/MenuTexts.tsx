@@ -14,10 +14,10 @@ const menuTextsContent = [
     name: 'PROČ ZVOLIT NÁS'
   },
   {
-    name: 'KONTAKT'
+    name: 'KAMENNÁ PRODEJNA'
   },
   {
-    name: 'KAMENNÁ PRODEJNA'
+    name: 'KONTAKT'
   }
 ]
 

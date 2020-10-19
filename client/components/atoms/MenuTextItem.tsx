@@ -12,9 +12,10 @@ const Item = styled.a`
   margin-right: 2rem;
   font-family: ${props => props.theme.fonts.menu};
   color: ${props => props.theme.colors.mainFontColor};
-  font-weight: 200;
+  font-weight: 300;
   letter-spacing: 1px;
   cursor: pointer;
+  font-size: 15px;
   
   &:after{
   content: '';
