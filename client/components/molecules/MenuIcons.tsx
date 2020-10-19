@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { IconDark } from '../atoms/IconDark'
+import { IconDark, IconDarkDesktopOnly } from '../atoms/IconDark'
+import sizes from '../../common/constants/sizes'
 
 const MenuIconsContainer = styled.div`
   margin-left: auto;
@@ -13,22 +14,26 @@ const MenuIconsContainer = styled.div`
   a {
     color: inherit;
   }
+  
+  @media screen and (max-width: ${sizes.small}px) {
+    margin-top: 1rem;
+  }
 `
 
 const MenuIcons = () => {
   return (
     <MenuIconsContainer>
       <a href='#'>
-        <IconDark className='fas fa-user fa-lg'/>
+        <IconDark aria-hidden className='fas fa-user fa-2x'/>
       </a>
       <a href='#'>
-        <IconDark className='fas fa-search fa-lg'/>
+        <IconDark aria-hidden className='fas fa-search fa-2x'/>
       </a>
       <a href='#'>
-        <IconDark className='fas fa-map-marker-alt fa-lg'/>
+        <IconDarkDesktopOnly aria-hidden className='fas fa-map-marker-alt fa-2x'/>
       </a>
       <a href='#'>
-        <IconDark className='fas fa-shopping-bag fa-lg'/>
+        <IconDarkDesktopOnly aria-hidden className='fas fa-shopping-bag fa-2x'/>
       </a>
     </MenuIconsContainer>
   )

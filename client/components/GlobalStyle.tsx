@@ -7,6 +7,7 @@ const GlobalStyle = createGlobalStyle<ThemeProps<any>>`
   
   html {
     font-family: ${props => props.theme.fonts.default};
+    font-size: 10px;
   }
   
   input {
