@@ -3,11 +3,13 @@ import styled from 'styled-components'
 import MenuTexts from '../molecules/MenuTexts'
 import MenuIcons from '../molecules/MenuIcons'
 import sizes from '../../common/constants/sizes'
+import { MaxWidthContainer } from '../atoms/MaxWidthContainer'
 
 const HeaderContainer = styled.header`
   width: 100%;
   min-height: 80px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   padding: 0 8rem;
   
@@ -18,11 +20,6 @@ const HeaderContainer = styled.header`
 
 const LogoDesktop = styled.img`
   margin-top: -7px;
-  margin-right: 16rem;
-  
-  @media screen and (max-width: ${sizes.largest}px) {
-    margin-right: 10rem;
-  }
   
   @media screen and (max-width: ${sizes.small}px) {
     display: none;
@@ -40,12 +37,14 @@ const LogoMobile = styled.img`
 
 const Header = () => {
   return (
-    <HeaderContainer>
-      <LogoDesktop src='/static/logo-dynamic.gif' alt='zlatnictví Vaněk'/>
-      <LogoMobile src='/static/logo-black-name-only.png' alt='zlatnictví Vaněk'/>
-      <MenuTexts/>
-      <MenuIcons/>
-    </HeaderContainer>
+    <MaxWidthContainer>
+      <HeaderContainer>
+        <LogoDesktop src='/static/logo-dynamic.gif' alt='zlatnictví Vaněk'/>
+        <LogoMobile src='/static/logo-black-name-only.png' alt='zlatnictví Vaněk'/>
+        <MenuTexts/>
+        <MenuIcons/>
+      </HeaderContainer>
+    </MaxWidthContainer>
   )
 }
 

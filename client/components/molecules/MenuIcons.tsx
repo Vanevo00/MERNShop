@@ -4,7 +4,6 @@ import { IconDark, IconDarkDesktopOnly } from '../atoms/IconDark'
 import sizes from '../../common/constants/sizes'
 
 const MenuIconsContainer = styled.div`
-  margin-left: auto;
   display: flex;
   
   i {
