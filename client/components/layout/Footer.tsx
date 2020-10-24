@@ -36,7 +36,9 @@ const MenuItem = styled.a`
   padding: 5px 10px;
   border-color: ${props => props.theme.colors.mainLightFontColor};
   border-right-style: solid;
+  border-width: thin;
   font-size: 18px;
+  font-family: ${props => props.theme.fonts.menu} 
 `
 
 const Copyright = styled.p`
@@ -57,7 +59,7 @@ const Circle = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 5px 0px;
+  margin: 1rem 0rem;
 `
 
 const Icon = styled.i`
@@ -82,12 +84,12 @@ const AboutItem = styled.p`
 `
 const AboutHead = styled.p`
   font-size: 18px;
-  font-weight: 600;
+  font-family: ${props => props.theme.fonts.menu} 
 `
 
 const AboutText = styled.p`
-  font-size: 14px;
-  padding: 5px 0px;
+  font-size: 13px;
+  padding: 10px 0px;
 `
 
 
