@@ -1,4 +1,5 @@
 import React from 'react'
+import sizes from '../../common/constants/sizes'
 import styled from 'styled-components'
 import { MaxWidthContainer } from '../atoms/MaxWidthContainer'
 
@@ -15,9 +16,17 @@ const FooterMaxWidthContainer = styled(MaxWidthContainer)`
   min-height: 160px;
   align-items: center;
   padding: 3rem 8rem;
+
+  @media screen and (max-width: ${sizes.small}px) {
+    padding: 3rem 1rem 3rem 1rem;
+  }
 `
 
 const Column = styled.div`  
+  @media screen and (max-width: ${sizes.small}px) {
+    display: block;
+    padding: 2rem 1rem;
+  }
 `
 
 const Logo = styled.img`
@@ -25,6 +34,13 @@ const Logo = styled.img`
   padding: 5px 0px 10px 0px;
   display: block;
   margin: 0 auto;
+
+  @media screen and (max-width: ${sizes.large}px) {
+    width: 10rem;
+  };
+  @media screen and (max-width: ${sizes.small}px) {
+    display: none;
+  }
 `
 
 const Menu = styled.div`
@@ -38,13 +54,29 @@ const MenuItem = styled.a`
   border-right-style: solid;
   border-width: thin;
   font-size: 18px;
-  font-family: ${props => props.theme.fonts.menu} 
+  font-family: ${props => props.theme.fonts.menu};
+
+  @media screen and (max-width: ${sizes.largest}px) {
+    font-size: 16px;
+    ;
+  };
+  @media screen and (max-width: ${sizes.large}px) {
+    font-size: 14px;
+    border: none;
+  };
+  @media screen and (max-width: ${sizes.small}px) {
+    display: flex;
+  }
 `
 
 const Copyright = styled.p`
   padding: 10px 0px;
   margin: 5px;
   font-size: 12px;
+
+  @media screen and (max-width: ${sizes.large}px) {
+    display: none;
+  }
 `
 
 const ContactItem = styled.div`
@@ -71,25 +103,68 @@ const CircleInfo = styled.p`
   font-size: 15px;
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: ${sizes.large}px) {
+    font-size: 13px;
+    padding: 0px 5px;
+  };
+  @media screen and (max-width: ${sizes.small}px) {
+    display: none;
+  }
+`
+
+const SquareButtonContainer = styled.div`
+  display: flex;
+
+  @media screen and (max-width: ${sizes.small}px) {
+    display: flex;
+    flex-direction: column;
+  }
 `
 
 const SquareButton = styled.button`
   border-radius: 3px;
   border: none;
   margin: 5px;
+  padding: 5px;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 
 const AboutItem = styled.p`
   width: 35rem;
+
+  @media screen and (max-width: ${sizes.large}px) {
+    width: auto;
 `
+
 const AboutHead = styled.p`
   font-size: 18px;
-  font-family: ${props => props.theme.fonts.menu} 
+  font-family: ${props => props.theme.fonts.menu};
+
+  @media screen and (max-width: ${sizes.large}px) {
+    display: flex;
+    font-size: 14px;
+  };
+  @media screen and (max-width: ${sizes.small}px) {
+    display: none;
+  }
 `
 
 const AboutText = styled.p`
   font-size: 13px;
   padding: 10px 0px;
+
+  @media screen and (max-width: ${sizes.large}px) {
+    display: flex;
+    font-size: 11px;
+  };
+  @media screen and (max-width: ${sizes.small}px) {
+    display: none;
+  }
 `
 
 
@@ -129,8 +204,10 @@ const Footer = () => {
             <AboutHead>Náš příběh</AboutHead>
             <AboutText>V naší rodinné firmě získáte nadstandardní služby a servis, které jsou založeny na dlouholetých zkušenostech v oboru.<br/><br/>Je pro nás důležitá nejen kvalita a vysoká odbornost, ale zároveň i vztah a osobní přístup ke všem zákazníkům.</AboutText>
           </AboutItem>
-          <SquareButton><Icon className='fab fa-facebook-f fa-2x'/></SquareButton>
-          <SquareButton><Icon className='fab fa-instagram fa-2x'/></SquareButton> 
+          <SquareButtonContainer>
+            <SquareButton><Icon className='fab fa-facebook-f fa-2x'/></SquareButton>
+            <SquareButton><Icon className='fab fa-instagram fa-2x'/></SquareButton> 
+          </SquareButtonContainer>
         </Column>
        </FooterMaxWidthContainer>
     </FooterContainer>
