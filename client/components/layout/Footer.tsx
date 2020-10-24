@@ -28,6 +28,7 @@ const Logo = styled.img`
 `
 
 const Menu = styled.div`
+  padding: 10px 0px;
 `
 
 const MenuItem = styled.a`
@@ -71,14 +72,22 @@ const CircleInfo = styled.p`
 `
 
 const SquareButton = styled.button`
-  border-radius: 5px;
+  border-radius: 3px;
   border: none;
-  margin: 5px 0px;
-  display: flex;
+  margin: 5px;
 `
 
-const Map = styled.img`
-  width: 25rem;
+const AboutItem = styled.p`
+  width: 35rem;
+`
+const AboutHead = styled.p`
+  font-size: 18px;
+  font-weight: 600;
+`
+
+const AboutText = styled.p`
+  font-size: 14px;
+  padding: 5px 0px;
 `
 
 
@@ -101,6 +110,10 @@ const Footer = () => {
         </Column>
         <Column>
           <ContactItem>
+            <Circle><Icon className='fas fa-map-marker-alt fa-lg'/></Circle>
+            <CircleInfo>Pražská 164<br/>280 02 Kolín</CircleInfo>
+            </ContactItem> 
+          <ContactItem>
             <Circle><Icon className='fas fa-phone-alt fa-lg'/></Circle>
             <CircleInfo>+420 321 724 470</CircleInfo>
           </ContactItem>
@@ -108,15 +121,14 @@ const Footer = () => {
             <Circle><Icon className='fas fa-envelope fa-lg'/></Circle>
             <CircleInfo>info@zlatnictvivanek.cz</CircleInfo>
           </ContactItem>
-          <SquareButton><Icon className='fab fa-facebook-f fa-2x'/></SquareButton>
-          <SquareButton><Icon className='fab fa-instagram fa-2x'/></SquareButton> 
         </Column>
         <Column>
-          <ContactItem>
-            <Circle><Icon className='fas fa-map-marker-alt fa-lg'/></Circle>
-            <CircleInfo>Pražská 164<br/>280 02 Kolín</CircleInfo>
-          </ContactItem>
-          <Map src='/static/map.png' alt='mapa zlatnictví Vaněk'></Map>  
+          <AboutItem>
+            <AboutHead>Náš příběh</AboutHead>
+            <AboutText>V naší rodinné firmě získáte nadstandardní služby a servis, které jsou založeny na dlouholetých zkušenostech v oboru.<br/><br/>Je pro nás důležitá nejen kvalita a vysoká odbornost, ale zároveň i vztah a osobní přístup ke všem zákazníkům.</AboutText>
+          </AboutItem>
+          <SquareButton><Icon className='fab fa-facebook-f fa-2x'/></SquareButton>
+          <SquareButton><Icon className='fab fa-instagram fa-2x'/></SquareButton> 
         </Column>
        </FooterMaxWidthContainer>
     </FooterContainer>
