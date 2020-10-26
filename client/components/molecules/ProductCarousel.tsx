@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
@@ -19,7 +19,7 @@ const ProductContainer = styled.div`
   margin-right: 1rem;
 `
 
-const ProductCarousel = () => {
+const ProductCarousel: FunctionComponent = ({ children }) => {
   const settings = {
     variableWidth: true,
     speed: 500,
@@ -30,36 +30,7 @@ const ProductCarousel = () => {
   return (
     <CarouselContainer>
       <Slider {...settings}>
-        <div>
-          <ProductContainer>
-            <h3>1</h3>
-          </ProductContainer>
-        </div>
-        <div>
-          <ProductContainer>
-            <h3>2</h3>
-          </ProductContainer>
-        </div>
-        <div>
-          <ProductContainer>
-            <h3>3</h3>
-          </ProductContainer>
-        </div>
-        <div>
-          <ProductContainer>
-            <h3>4</h3>
-          </ProductContainer>
-        </div>
-        <div>
-          <ProductContainer>
-            <h3>5</h3>
-          </ProductContainer>
-        </div>
-        <div>
-          <ProductContainer>
-            <h3>6</h3>
-          </ProductContainer>
-        </div>
+        {children}
       </Slider>
     </CarouselContainer>
   )

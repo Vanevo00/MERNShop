@@ -3,6 +3,8 @@ import { MaxWidthContainer } from '../atoms/MaxWidthContainer'
 import SectionHeading from '../atoms/SectionHeading'
 import styled from 'styled-components'
 import ProductCarousel from '../molecules/ProductCarousel'
+import ProductItem from '../molecules/ProductItem'
+import { mockedJewelry } from '../../common/constants/mocks'
 
 const HeadingContainer = styled(MaxWidthContainer)`
   display: flex;
@@ -22,10 +24,11 @@ const PickedForYou = () => {
       <HeadingContainer>
         <SectionHeading>Vybráno pro vás</SectionHeading>
         <CarouselContainer>
-          <ProductCarousel/>
+          <ProductCarousel>
+            {mockedJewelry.map((item) => <ProductItem name={item.name}/>)}
+          </ProductCarousel>
         </CarouselContainer>
       </HeadingContainer>
-
     </>
   )
 }
