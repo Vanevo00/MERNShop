@@ -15,7 +15,7 @@ const Line = styled.div`
   height: 1px;
   background-color: ${props => props.theme.colors.mainFontColor};
   position: absolute;
-  top: 15px;
+  top: 17px;
 `
 
 const WhiteBackground = styled.div`
@@ -39,7 +39,6 @@ const SectionHeading: FunctionComponent = ({ children }) => {
         <Heading>{children}</Heading>
       </WhiteBackground>
     </SectionContainer>
-
   )
 }
 

@@ -2,14 +2,18 @@ import React from 'react'
 import { MaxWidthContainer } from '../atoms/MaxWidthContainer'
 import SectionHeading from '../atoms/SectionHeading'
 import styled from 'styled-components'
-import ProductSlider from '../molecules/ProductSlider'
+import ProductCarousel from '../molecules/ProductCarousel'
 
 const HeadingContainer = styled(MaxWidthContainer)`
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `
 
-const SliderContainer = styled(MaxWidthContainer)`
+const CarouselContainer = styled(MaxWidthContainer)`
   margin-top: 2rem;
+  padding-left: 40px;
+  padding-right: 15px;
 `
 
 const PickedForYou = () => {
@@ -17,10 +21,11 @@ const PickedForYou = () => {
     <>
       <HeadingContainer>
         <SectionHeading>Vybráno pro vás</SectionHeading>
+        <CarouselContainer>
+          <ProductCarousel/>
+        </CarouselContainer>
       </HeadingContainer>
-      <SliderContainer>
-        <ProductSlider/>
-      </SliderContainer>
+
     </>
   )
 }
