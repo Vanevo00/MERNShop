@@ -49,7 +49,7 @@ export const mockedJewelry = [
     _id: '3',
     name: 'Prsten s ametystem a diamanty 01',
     price: 49510,
-    image: '/static/jewelry/rings/ametyst_01.jpg',
+    mainImage: '/static/jewelry/rings/ametyst_01.jpg',
     material: '14k bílé zlato 585/1000',
     netWeight: 3.83,
     gem: [
@@ -77,7 +77,7 @@ export const mockedJewelry = [
     _id: '4',
     name: 'Naušnice se žlutými diamanty 01',
     price: 77270,
-    image: '/static/jewelry/earings/yellow_diamond_01.jpg',
+    mainImage: '/static/jewelry/earings/yellow_diamond_01.jpg',
     material: '14k bílé a žluté zlato 585/1000',
     netWeight: 2.55,
     gem: [
@@ -123,7 +123,7 @@ export const mockedJewelry = [
     _id: '5',
     name: 'Naušnice se smaragdy a diamanty',
     price: 118270,
-    image: '/static/jewelry/earings/smaragd.jpg',
+    mainImage: '/static/jewelry/earings/smaragd.jpg',
     material: '14k bílé zlato 585/1000',
     netWeight: 3.97,
     gem: [
@@ -153,7 +153,7 @@ export const mockedJewelry = [
     _id: '6',
     name: 'Přívěsek s tanzanitem a diamantem 01',
     price: 10740,
-    image: '/static/jewelry/pendants/tanzanit_01.jpg',
+    mainImage: '/static/jewelry/pendants/tanzanit_01.jpg',
     material: '14k bílé zlato 585/1000',
     netWeight: 0.59,
     gem: [

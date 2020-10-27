@@ -1,4 +1,5 @@
 import React, { MouseEvent } from 'react'
+import styled from 'styled-components'
 
 interface Props {
   style?: any
@@ -6,12 +7,17 @@ interface Props {
   onClick?: (event: MouseEvent<HTMLElement>) => void
 }
 
+const ArrowImage = styled.img`
+  height: 30px;
+`
+
+const LeftArrowImage = styled(ArrowImage)`
+ transform: rotate(180deg);
+`
+
 const arrowStyle = {
-  color: 'lightGrey',
-  right: '100px',
   position: 'absolute',
-  fontSize: '30px',
-  top: '105px',
+  top: '80px',
   zIndex: '1'
 }
 
@@ -32,7 +38,7 @@ const CarouselArrow = ({ style, pointingLeft, onClick }: Props) => {
       style={pointingLeft ? {...style, ...leftArrowStyle} : {...style, ...rightArrowStyle}}
       onClick={onClick}
     >
-      { pointingLeft ? <i className="fas fa-arrow-circle-left"/> : <i className="fas fa-arrow-circle-right"/> }
+      { pointingLeft ? <LeftArrowImage src='/static/icons/right-arrow.svg' alt='right arrow'/> : <ArrowImage src='/static/icons/right-arrow.svg' alt='right arrow'/> }
     </div>
   )
 }
