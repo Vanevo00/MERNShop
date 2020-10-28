@@ -5,7 +5,7 @@ export default {
     mainLightFontColor: '#fff'
   },
   fonts: {
-    default: '"Roboto", sans-serif',
+    default: '"Montserrat", sans-serif',
     menu: '"Oswald", sans-serif'
   }
 }
