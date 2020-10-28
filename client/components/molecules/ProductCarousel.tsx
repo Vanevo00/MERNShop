@@ -7,18 +7,28 @@ import sizes from '../../common/constants/sizes'
 
 const ProductCarousel: FunctionComponent = ({ children }) => {
   const settings = {
-    variableWidth: true,
     speed: 500,
-    slidesToScroll: 1,
+    slidesToShow: 5,
+    slidesToScroll: 5,
     nextArrow: <CarouselArrow/>,
     prevArrow: <CarouselArrow pointingLeft={true} />,
     responsive: [
       {
         breakpoint: sizes.large,
         settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4,
           arrows: false
         }
-      }
+      },
+      {
+        breakpoint: sizes.medium,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          arrows: false
+        }
+      },
     ]
   }
 

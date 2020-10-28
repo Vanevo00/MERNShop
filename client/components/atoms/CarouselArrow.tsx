@@ -17,7 +17,7 @@ const LeftArrowImage = styled(ArrowImage)`
 
 const arrowStyle = {
   position: 'absolute',
-  top: '12rem',
+  top: '40%',
   zIndex: '1',
   backgroundColor: '#fff',
   padding: '1rem'

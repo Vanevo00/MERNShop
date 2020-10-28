@@ -15,7 +15,7 @@ const HeadingContainer = styled(MaxWidthContainer)`
 const CarouselContainer = styled(MaxWidthContainer)`
   margin-top: 2rem;
   cursor: pointer;
-  padding: 0 1%;
+  padding-left: 1%;
 `
 
 const PickedForYou = () => {
