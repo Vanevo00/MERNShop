@@ -25,7 +25,7 @@ const PickedForYou = () => {
         <SectionHeading>Vybráno pro vás</SectionHeading>
         <CarouselContainer>
           <ProductCarousel>
-            {mockedJewelry.map((item) => <ProductItem name={item.name} mainImage={item.mainImage}/>)}
+            {mockedJewelry.map((item) => <ProductItem name={item.name} mainImage={item.mainImage} price={item.price}/>)}
           </ProductCarousel>
         </CarouselContainer>
       </HeadingContainer>
