@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import numberWithSpaces from '../../utils/numberWithSpaces'
 
 interface Props {
   mainImage: string
@@ -46,8 +47,6 @@ const ProductInfo = styled.div`
 const ProductName = styled.p`
   font-size: 18px;
 `
-
-const numberWithSpaces = (number: number) => number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")
 
 const ProductItem = ({ mainImage, name, price }: Props) => {
   return (
