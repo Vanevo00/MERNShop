@@ -7,7 +7,7 @@ interface Props {
 }
 
 const ProductImage = styled.img`
-  max-height: 20rem;
+  max-height: 30rem;
   margin-right: 1rem;
 `
 

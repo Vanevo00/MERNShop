@@ -17,18 +17,20 @@ const LeftArrowImage = styled(ArrowImage)`
 
 const arrowStyle = {
   position: 'absolute',
-  top: '80px',
-  zIndex: '1'
+  top: '12rem',
+  zIndex: '1',
+  backgroundColor: '#fff',
+  padding: '1rem'
 }
 
 const leftArrowStyle = {
   ...arrowStyle,
-  left: '-30px',
+  left: '0',
 }
 
 const rightArrowStyle = {
   ...arrowStyle,
-  right: '-30px',
+  right: '0',
 }
 
 const CarouselArrow = ({ style, pointingLeft, onClick }: Props) => {
@@ -38,7 +40,7 @@ const CarouselArrow = ({ style, pointingLeft, onClick }: Props) => {
       style={pointingLeft ? {...style, ...leftArrowStyle} : {...style, ...rightArrowStyle}}
       onClick={onClick}
     >
-      { pointingLeft ? <LeftArrowImage src='/static/icons/right-arrow.svg' alt='right arrow'/> : <ArrowImage src='/static/icons/right-arrow.svg' alt='right arrow'/> }
+      { pointingLeft ? <LeftArrowImage src='/static/icons/right-arrow.svg' alt='right arrow'/> : <ArrowImage src='/static/icons/right-arrow.svg' alt='left arrow'/> }
     </div>
   )
 }
