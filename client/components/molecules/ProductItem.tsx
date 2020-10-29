@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import numberWithSpaces from '../../utils/numberWithSpaces'
+import sizes from '../../common/constants/sizes'
 
 interface Props {
   mainImage: string
@@ -30,22 +31,31 @@ const ProductInfo = styled.div`
   padding: 4rem 1rem;
   
   p {
+    font-size: ${props => props.theme.fontSizes.small};
     opacity: 0;
     transition: .3s;
     text-align: center;
+    
+    @media screen and (max-width: ${sizes.medium}px) {
+        font-size: ${props => props.theme.fontSizes.smaller};
+    }
   }
   
   &:hover {
     background-color: rgba(0, 33, 85, 0.9);
     
+    @media screen and (max-width: ${sizes.small}px) {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    
     p {
       opacity: 1;
+      
+      @media screen and (max-width: ${sizes.small}px) {
+        opacity: 0;
+      }
     }
   }
-`
-
-const ProductName = styled.p`
-  font-size: 18px;
 `
 
 const ProductItem = ({ mainImage, name, price }: Props) => {
@@ -54,8 +64,8 @@ const ProductItem = ({ mainImage, name, price }: Props) => {
       <ImageContainer>
         <ProductImage src={mainImage} alt={name}/>
         <ProductInfo>
-          <ProductName>{name}</ProductName>
-          <ProductName>{numberWithSpaces(price)} Kč</ProductName>
+          <p>{name}</p>
+          <p>{numberWithSpaces(price)} Kč</p>
         </ProductInfo>
       </ImageContainer>
     </div>

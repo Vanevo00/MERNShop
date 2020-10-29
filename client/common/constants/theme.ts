@@ -11,6 +11,7 @@ export default {
   },
   fontSizes: {
     medium: '2rem',
-    small: '1.8rem'
+    small: '1.8rem',
+    smaller: '1.6rem'
   }
 }
