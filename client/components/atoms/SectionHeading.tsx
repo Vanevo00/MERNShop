@@ -28,7 +28,6 @@ const WhiteBackground = styled.div`
 
 const Heading = styled.h2`
   font-size: ${props => props.theme.fontSizes.medium};
-  font-style: italic;
 `
 
 const SectionHeading: FunctionComponent = ({ children }) => {
