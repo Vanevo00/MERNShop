@@ -10,6 +10,7 @@ export default {
     menu: '"Oswald", sans-serif'
   },
   fontSizes: {
-    medium: '2rem'
+    medium: '2rem',
+    small: '1.8rem'
   }
 }
