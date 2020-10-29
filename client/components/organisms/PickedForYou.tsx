@@ -10,6 +10,10 @@ const HeadingContainer = styled(MaxWidthContainer)`
   display: flex;
   flex-direction: column;
   align-items: center;
+  
+  .slick-slide {
+   outline: none;
+  }
 `
 
 const CarouselContainer = styled(MaxWidthContainer)`
