@@ -5,30 +5,40 @@ import { MaxWidthContainer } from '../atoms/MaxWidthContainer'
 
 const FooterContainer = styled.footer`
   width: 100%;
-  background-color: #D9DDDC;
-`
+  font-size: 14px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 2fr auto 1fr;
+  grid-template-rows: 1rem auto 2rem;
+  grid-gap: 1rem;
+  grid-template-areas: 
+    's s s s s s'
+    '. a b c d .'
+    'e e e e e e';
+  `
+
 
 const Stripe = styled.div`
-  width: 100%;
-  height: 1rem;
+  grid-area: s;
+  grid-column: 1 / -1;
   background-color: ${props => props.theme.colors.main};
 `
 
-const FooterMaxWidthContainer = styled(MaxWidthContainer)`
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  min-height: 160px;
-  padding: 3rem 8rem;
-  font-size: 14px;
+const ColumnA = styled.div`
+  padding: 1rem 0;  
+  grid-area: a;
 `
-const MainColumn = styled.div`
-  display: flex;
-  justify-content: space-between;
+const ColumnB = styled.div` 
+  padding: 1rem 0;
+  grid-area: b;
 `
-
-const Column = styled.div`
-  padding: 3rem 9rem 3rem 0;  
+const ColumnC = styled.div` 
+  padding: 1rem 0; 
+  grid-area: c;
+`
+const ColumnD = styled.div` 
+  padding: 1rem 0; 
+  grid-area: d;
+  justify-self: end;
 `
 
 const HeadColumn = styled.p`
@@ -39,8 +49,29 @@ const HeadColumn = styled.p`
   
 `
 
-const ColumnItem = styled.p`
+const ColumnItem = styled.a`
   padding: 5px 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  
+  &:after{
+    content: '';
+    position: absolute;
+    width: 0; height: 2px;
+    display: block;
+    margin-top: 15px;
+    right: 0;
+    background: ${props => props.theme.colors.mainFontColor};
+    transition: width .2s ease;
+    -webkit-transition: width .2s ease;
+  }
+ 
+  &:hover:after{
+    width: 50%;
+    left: 0;
+    background: ${props => props.theme.colors.mainFontColor};
+  }
 `
 
 const SquareButtonContainer = styled.div`
@@ -61,54 +92,51 @@ const SquareButton = styled.a`
 `
 
 const EndStripe = styled.div`
-  width: 100%;
-  display: flex;
+  grid-area: e;
+  grid-column: 1 / -1;
+  display: grid;
   justify-content: center;
-  padding: 1rem 0;
+  align-items: center;
+  background-color: #D9DDDC;
 `
 
 const Copyright = styled.p`
+  font-size: 12px;
 `
 
 const Footer = () => {
   return (
     <FooterContainer>
       <Stripe></Stripe>
-      <FooterMaxWidthContainer>
-        <MainColumn>
-          <Column>
-            <HeadColumn>ZÁKAZNICKÝ SERVIS</HeadColumn>
-            <ColumnItem>Údržba a opravy šperků</ColumnItem>
-            <ColumnItem>Reklamace a vrácení</ColumnItem>
-            <ColumnItem>Sjednejte si schůzku</ColumnItem>
-            <ColumnItem>Často kladané otázky</ColumnItem>
-            <ColumnItem>Dárkové poukazy</ColumnItem>
-          </Column>
-          <Column>
-            <HeadColumn>O NÁS</HeadColumn>
-            <ColumnItem>Náš příběh</ColumnItem>
-            <ColumnItem>Kamenná prodejna</ColumnItem>
-            <ColumnItem>Kontaktujte nás</ColumnItem>
-          </Column>
-          <Column>
-            <HeadColumn>PRÁVNÍ PODKLADY</HeadColumn>
-            <ColumnItem>Obchodní podmínky</ColumnItem>
-            <ColumnItem>Zásady zpracování osobních údajů</ColumnItem>
-          </Column>
-        </MainColumn>
-        <MainColumn>
-          <Column>
-            <HeadColumn>Sledujte nás</HeadColumn>
-            <SquareButtonContainer>
-             <SquareButton href='https://www.facebook.com/Zlatnictv%C3%AD-Van%C4%9Bk-zal-1991-393430250808811/' target='_blank'><Icon className='fab fa-facebook-f fa-2x'/></SquareButton>
-             <SquareButton href='https://www.instagram.com/jewelry_vanek/' target='_blank'><Icon className='fab fa-instagram fa-2x'/></SquareButton> 
-            </SquareButtonContainer>
-          </Column>
-        </MainColumn>
-       </FooterMaxWidthContainer>
-       <EndStripe>
-         <Copyright>Copyright ©2020 Zlatnictví Vaněk</Copyright>
-       </EndStripe>
+      <ColumnA>
+        <HeadColumn>ZÁKAZNICKÝ SERVIS</HeadColumn>
+        <ColumnItem href='#'>Údržba a opravy šperků</ColumnItem>
+        <ColumnItem href='#'>Reklamace a vrácení</ColumnItem>
+        <ColumnItem href='#'>Sjednejte si schůzku</ColumnItem>
+        <ColumnItem href='#'>Často kladané otázky</ColumnItem>
+        <ColumnItem href='#'>Dárkové poukazy</ColumnItem>
+      </ColumnA>
+      <ColumnB>
+        <HeadColumn>O NÁS</HeadColumn>
+        <ColumnItem href='#'>Náš příběh</ColumnItem>
+        <ColumnItem href='#'>Kamenná prodejna</ColumnItem>
+        <ColumnItem href='#'>Kontaktujte nás</ColumnItem>
+      </ColumnB>
+      <ColumnC>
+        <HeadColumn>PRÁVNÍ PODKLADY</HeadColumn>
+        <ColumnItem href='#'>Obchodní podmínky</ColumnItem>
+        <ColumnItem href='#'>Zásady zpracování osobních údajů</ColumnItem>
+      </ColumnC>
+      <ColumnD>
+        <HeadColumn>Sledujte nás</HeadColumn>
+        <SquareButtonContainer>
+          <SquareButton href='https://www.facebook.com/Zlatnictv%C3%AD-Van%C4%9Bk-zal-1991-393430250808811/' target='_blank'><Icon className='fab fa-facebook-f fa-2x'/></SquareButton>
+          <SquareButton href='https://www.instagram.com/jewelry_vanek/' target='_blank'><Icon className='fab fa-instagram fa-2x'/></SquareButton> 
+        </SquareButtonContainer>
+      </ColumnD>
+      <EndStripe>
+        <Copyright>Copyright ©2020 Zlatnictví Vaněk</Copyright>
+      </EndStripe>
     </FooterContainer>
   )
 }
