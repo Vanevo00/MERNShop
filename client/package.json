@@ -1,7 +1,7 @@
 {
   "name": "client",
   "version": "1.0.0",
-  "description": "Jewelry_store client",
+  "description": "Jewelry store client",
   "main": "index.js",
   "scripts": {
     "dev": "ts-node --project tsconfig.server.json customServer/web-server.js",
