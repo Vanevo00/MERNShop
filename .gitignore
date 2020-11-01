@@ -2,3 +2,4 @@ client/node_modules/
 client/.next
 .idea/
 node_modules/
+config/default.json

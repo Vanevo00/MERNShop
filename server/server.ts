@@ -1,6 +1,7 @@
 import express from 'express'
 import cors from 'cors'
 import { ApolloServer, gql } from 'apollo-server-express'
+import { connectDB } from './utils/connectDB'
 
 const typeDefs = gql`    
     type Book {
@@ -34,6 +35,8 @@ const server = new ApolloServer({ typeDefs, resolvers })
 const app = express()
 server.applyMiddleware({ app })
 const port = 2999
+
+connectDB()
 
 app.use(express.json()) // to accept body data
 app.options('/', cors()) // CORS pre-flight
