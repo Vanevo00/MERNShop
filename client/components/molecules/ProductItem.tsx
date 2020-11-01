@@ -4,7 +4,7 @@ import numberWithSpaces from '../../utils/numberWithSpaces'
 import sizes from '../../common/constants/sizes'
 import { RouteLink } from '../atoms/RouteLink'
 import { routes } from '../../common/constants/routes'
-import { ProductItem as ProductItemType } from '../../types/ProductItem'
+import { ProductItem as ProductItemType } from '../../../types/ProductItem'
 
 const ImageContainer = styled.div`
   max-width: 94%;
