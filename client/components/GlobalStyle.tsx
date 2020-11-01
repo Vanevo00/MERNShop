@@ -16,6 +16,7 @@ const GlobalStyle = createGlobalStyle<ThemeProps<any>>`
   
   a {
     text-decoration: none;
+    color: ${props => props.theme.colors.mainFontColor};
   }
   
   body {

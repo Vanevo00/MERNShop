@@ -1,6 +1,6 @@
 export default {
   colors: {
-    main: '#002155',
+    main: '#000F4D',
     mainFontColor: '#000',
     mainLightFontColor: '#fff'
   },
