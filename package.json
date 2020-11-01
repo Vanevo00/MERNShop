@@ -1,10 +1,10 @@
 {
-  "name": "Jewelry store",
+  "name": "Jewelry_store",
   "version": "1.0.0",
-  "description": "",
+  "description": "Jewelry store",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start:server": "nodemon"
   },
   "repository": {
     "type": "git",
