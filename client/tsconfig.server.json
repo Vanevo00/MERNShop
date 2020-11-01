@@ -1,0 +1,36 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "outDir": ".next/node",
+    "target": "es2017",
+    "lib": [
+      "dom",
+      "es2017"
+    ],
+    "allowJs": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "noEmit": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "removeComments": false,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "emitDecoratorMetadata": true,
+    "isolatedModules": false,
+    "experimentalDecorators": true,
+    "typeRoots": [
+      "./node_modules/@types"
+    ]
+  },
+  "include": [
+    "server/**/*",
+    "common/**/*",
+    "migrations/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
