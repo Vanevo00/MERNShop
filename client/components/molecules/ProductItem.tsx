@@ -2,12 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import numberWithSpaces from '../../utils/numberWithSpaces'
 import sizes from '../../common/constants/sizes'
-
-interface Props {
-  mainImage: string
-  name: string
-  price: number
-}
+import { RouteLink } from '../atoms/RouteLink'
+import { routes } from '../../common/constants/routes'
+import { ProductItem as ProductItemType } from '../../types/ProductItem'
 
 const ImageContainer = styled.div`
   max-width: 94%;
@@ -58,9 +55,20 @@ const ProductInfo = styled.div`
   }
 `
 
-const ProductItem = ({ mainImage, name, price }: Props) => {
+interface Props {
+  item: ProductItemType
+}
+
+const ProductItem = ({ item }: Props) => {
+  const {
+    name,
+    price,
+    mainImage,
+    slug
+  } = item
+
   return (
-    <div>
+    <RouteLink route={routes.PRODUCT_DETAIL} query={{ slug }}>
       <ImageContainer>
         <ProductImage src={mainImage} alt={name}/>
         <ProductInfo>
@@ -68,7 +76,7 @@ const ProductItem = ({ mainImage, name, price }: Props) => {
           <p>{numberWithSpaces(price)} Kč</p>
         </ProductInfo>
       </ImageContainer>
-    </div>
+    </RouteLink>
   )
 }
 

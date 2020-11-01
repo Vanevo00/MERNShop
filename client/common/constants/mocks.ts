@@ -2,6 +2,7 @@ export const mockedJewelry = [
   {
     _id: '1',
     name: 'Dimamantový prsten 06',
+    slug: 'diamantovy-prsten-06',
     price: 29800,
     mainImage: '/static/jewelry/rings/diamond_06.jpg',
     material: '14k bílé zlato 585/1000',
@@ -21,6 +22,7 @@ export const mockedJewelry = [
   {
     _id: '2',
     name: 'Dimamantový přívěsek 33',
+    slug: 'dimanovy-privesek-33',
     price: 10380,
     mainImage: '/static/jewelry/pendants/diamond_33.jpg',
     material: '14k bílé zlato 585/1000',
@@ -48,6 +50,7 @@ export const mockedJewelry = [
   {
     _id: '3',
     name: 'Prsten s ametystem a diamanty 01',
+    slug: 'prsten-s-ametystem-a-diamanty-01',
     price: 49510,
     mainImage: '/static/jewelry/rings/ametyst_01.jpg',
     material: '14k bílé zlato 585/1000',
@@ -76,6 +79,7 @@ export const mockedJewelry = [
   {
     _id: '4',
     name: 'Naušnice se žlutými diamanty 01',
+    slug: 'nausnice-se-zlutymi-diamanty-01',
     price: 77270,
     mainImage: '/static/jewelry/earings/yellow_diamond_01.jpg',
     material: '14k bílé a žluté zlato 585/1000',
@@ -122,6 +126,7 @@ export const mockedJewelry = [
   {
     _id: '5',
     name: 'Naušnice se smaragdy a diamanty',
+    slug: 'nausnice-se-smaragdy-a-diamanty',
     price: 118270,
     mainImage: '/static/jewelry/earings/smaragd.jpg',
     material: '14k bílé zlato 585/1000',
@@ -152,6 +157,7 @@ export const mockedJewelry = [
   {
     _id: '6',
     name: 'Přívěsek s tanzanitem a diamantem 01',
+    slug: 'privesek-s-tanzanitem-a-diamantem-01',
     price: 10740,
     mainImage: '/static/jewelry/pendants/tanzanit_01.jpg',
     material: '14k bílé zlato 585/1000',
