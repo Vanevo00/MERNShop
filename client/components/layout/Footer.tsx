@@ -4,49 +4,81 @@ import styled from 'styled-components'
 import { MaxWidthContainer } from '../atoms/MaxWidthContainer'
 
 const FooterContainer = styled.footer`
-  width: 100%;
-  font-size: 14px;
   display: grid;
-  grid-template-columns: 1fr 2fr 2fr 2fr auto 1fr;
-  grid-template-rows: 1rem auto 2rem;
+  font-size: 14px;
+  //grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 1rem;
   grid-template-areas: 
     's s s s s s'
     '. a b c d .'
     'e e e e e e';
-  `
 
+  @media screen and (max-width: ${sizes.small}px) {
+    grid-template-areas:
+    's'
+    'a'
+    'b'
+    'c'
+    'd'
+    'e';
+  }
+
+  @media screen and (max-width: ${sizes.large}px) {
+    grid-template-areas:
+    's s'
+    'a b'
+    'c d'
+    'e e';
+  }
+`
 
 const Stripe = styled.div`
+  height: 1rem;
   grid-area: s;
-  grid-column: 1 / -1;
   background-color: ${props => props.theme.colors.main};
 `
 
 const ColumnA = styled.div`
-  padding: 1rem 0;  
   grid-area: a;
-`
-const ColumnB = styled.div` 
-  padding: 1rem 0;
-  grid-area: b;
-`
-const ColumnC = styled.div` 
-  padding: 1rem 0; 
-  grid-area: c;
-`
-const ColumnD = styled.div` 
-  padding: 1rem 0; 
-  grid-area: d;
-  justify-self: end;
+  padding-left: 2rem;
 `
 
-const HeadColumn = styled.p`
+const ColumnB = styled.div`
+  grid-area: b;
+  padding-left: 2rem;
+`
+
+const ColumnC = styled.div`
+  grid-area: c;
+  padding-left: 2rem;
+`
+
+const ColumnD = styled.div`
+  grid-area: d;
+  display: grid;
+  justify-self: end;
+  align-self: start;
+  padding-right: 2rem;
+
+  @media screen and (max-width: ${sizes.large}px) {
+    display: grid;
+    justify-self: start;
+    padding-left: 2rem;
+  }
+`
+
+const HeadColumn = styled.h3`
   color: ${props => props.theme.colors.main};
   font-size: 16px;
+  font-weight: normal;
   padding: 1rem 0;
-  font-family: ${props => props.theme.fonts.menu};
-  
+  font-family: ${props => props.theme.fonts.menu}; 
+`
+
+const ItemContainer = styled.div<{ showsOnMobile?: boolean }>`
+  @media screen and (max-width: ${sizes.small}px) {
+    display: ${props => props.showsOnMobile ? 'block' : 'none'}
+  };
 `
 
 const ColumnItem = styled.a`
@@ -93,7 +125,7 @@ const SquareButton = styled.a`
 
 const EndStripe = styled.div`
   grid-area: e;
-  grid-column: 1 / -1;
+  height: 2rem;
   display: grid;
   justify-content: center;
   align-items: center;
@@ -110,22 +142,28 @@ const Footer = () => {
       <Stripe></Stripe>
       <ColumnA>
         <HeadColumn>ZÁKAZNICKÝ SERVIS</HeadColumn>
-        <ColumnItem href='#'>Údržba a opravy šperků</ColumnItem>
-        <ColumnItem href='#'>Reklamace a vrácení</ColumnItem>
-        <ColumnItem href='#'>Sjednejte si schůzku</ColumnItem>
-        <ColumnItem href='#'>Často kladané otázky</ColumnItem>
-        <ColumnItem href='#'>Dárkové poukazy</ColumnItem>
+        <ItemContainer showsOnMobile={true}>
+          <ColumnItem href='#'>Údržba a opravy šperků</ColumnItem>
+          <ColumnItem href='#'>Reklamace a vrácení</ColumnItem>
+          <ColumnItem href='#'>Sjednejte si schůzku</ColumnItem>
+          <ColumnItem href='#'>Často kladané otázky</ColumnItem>
+          <ColumnItem href='#'>Dárkové poukazy</ColumnItem>
+        </ItemContainer>
       </ColumnA>
       <ColumnB>
         <HeadColumn>O NÁS</HeadColumn>
-        <ColumnItem href='#'>Náš příběh</ColumnItem>
-        <ColumnItem href='#'>Kamenná prodejna</ColumnItem>
-        <ColumnItem href='#'>Kontaktujte nás</ColumnItem>
+        <ItemContainer>
+          <ColumnItem href='#'>Náš příběh</ColumnItem>
+          <ColumnItem href='#'>Kamenná prodejna</ColumnItem>
+          <ColumnItem href='#'>Kontaktujte nás</ColumnItem>
+        </ItemContainer>
       </ColumnB>
       <ColumnC>
         <HeadColumn>PRÁVNÍ PODKLADY</HeadColumn>
-        <ColumnItem href='#'>Obchodní podmínky</ColumnItem>
-        <ColumnItem href='#'>Zásady zpracování osobních údajů</ColumnItem>
+        <ItemContainer>
+          <ColumnItem href='#'>Obchodní podmínky</ColumnItem>
+          <ColumnItem href='#'>Zásady zpracování osobních údajů</ColumnItem>
+        </ItemContainer>
       </ColumnC>
       <ColumnD>
         <HeadColumn>Sledujte nás</HeadColumn>
