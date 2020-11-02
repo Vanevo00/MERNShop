@@ -11,7 +11,7 @@ export const connectDB = async () => {
       useFindAndModify: false,
       useUnifiedTopology: true
     })
-    console.log('DB connected')
+    console.log('mongoDB connected')
   }
   catch(error) {
     console.log("error:", error)

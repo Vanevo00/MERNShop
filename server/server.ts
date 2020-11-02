@@ -2,36 +2,12 @@ import express from 'express'
 import cors from 'cors'
 import { ApolloServer, gql } from 'apollo-server-express'
 import { connectDB } from './utils/connectDB'
+import schema from './schema'
 
-const typeDefs = gql`    
-    type Book {
-        title: String
-        author: String
-    }
-    
-    type Query {
-        books: [Book]
-    }
-`
-
-const books = [
-  {
-    title: 'The Awakening',
-    author: 'Kate Chopin',
-  },
-  {
-    title: 'City of Glass',
-    author: 'Paul Auster',
-  },
-]
-
-const resolvers = {
-  Query: {
-    books: () => books,
-  },
-}
-
-const server = new ApolloServer({ typeDefs, resolvers })
+const server = new ApolloServer({
+  schema,
+  context: ({ req, res }) => ({ req, res })
+})
 const app = express()
 server.applyMiddleware({ app })
 const port = 2999
