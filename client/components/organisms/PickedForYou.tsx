@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import ProductCarousel from '../molecules/ProductCarousel'
 import ProductItem from '../molecules/ProductItem'
 import { mockedJewelry } from '../../common/constants/mocks'
-import { ProductItem as ProductItemType } from '../../../types/ProductItem'
+import { ProductType as ProductItemType } from '../../../types/Product'
 
 const HeadingContainer = styled(MaxWidthContainer)`
   display: flex;

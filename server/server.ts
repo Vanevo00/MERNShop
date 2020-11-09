@@ -1,6 +1,6 @@
 import express from 'express'
 import cors from 'cors'
-import { ApolloServer, gql } from 'apollo-server-express'
+import { ApolloServer } from 'apollo-server-express'
 import { connectDB } from './utils/connectDB'
 import schema from './schema'
 

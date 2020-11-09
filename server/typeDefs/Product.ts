@@ -9,4 +9,11 @@ export default gql`
     extend type Query {
         getProducts: [Product]
     }
+    
+    extend type Mutation {
+        addProduct(
+            name: String!
+            price: Int!
+        ): Product
+    }
 `

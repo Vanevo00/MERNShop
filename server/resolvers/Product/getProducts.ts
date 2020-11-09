@@ -1,16 +1,10 @@
-const products = [
-  {
-    name: "test12",
-    price: 12
-  },
-  {
-    name: "test10",
-    price: 10
-  }
-]
+import { ProductService } from '../../services/Product'
+import { ProductType } from '../../../types/Product'
+
+const productService = new ProductService()
 
 export default {
   Query: {
-    getProducts: () => products,
+    getProducts: async (): Promise<ProductType[]> => await productService.find(),
   },
 }
