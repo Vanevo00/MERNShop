@@ -1,10 +1,10 @@
-import { ProductType } from "../../../types/Product"
 import { ProductService } from "../../services/Product"
+import { IAddProductArgs, IProduct } from '../../types/Product'
 
 const productService = new ProductService()
 
 export default {
     Mutation: {
-        addProduct: async (_, args): Promise<ProductType> => await productService.create(args)
+        addProduct: async (_: undefined, args: IAddProductArgs): Promise<IProduct> => await productService.create(args)
     }
 }

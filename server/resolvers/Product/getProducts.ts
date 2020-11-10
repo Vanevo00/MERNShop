@@ -1,10 +1,11 @@
 import { ProductService } from '../../services/Product'
-import { ProductType } from '../../../types/Product'
+import { IProduct } from '../../types/Product'
+
 
 const productService = new ProductService()
 
 export default {
   Query: {
-    getProducts: async (): Promise<ProductType[]> => await productService.find(),
+    getProducts: async (): Promise<IProduct[]> => await productService.find(),
   },
 }
