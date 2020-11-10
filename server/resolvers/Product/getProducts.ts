@@ -6,6 +6,6 @@ const productService = new ProductService()
 
 export default {
   Query: {
-    getProducts: async (): Promise<IProdusct[]> => await productService.find(),
+    getProducts: async (): Promise<IProduct[]> => await productService.find(),
   },
 }
