@@ -20,10 +20,10 @@ export class ProductService {
 
   prepareProductFromArgs (args: IAddProductArgs) {
     return {
-       name: args.name,
-       slug: slugify(args.name),
-       price: args.price,
-       mainImage: args.mainImage
+      name: args.name,
+      slug: slugify(args.name),
+      price: args.price,
+      mainImage: args.mainImage
     }
   }
 }

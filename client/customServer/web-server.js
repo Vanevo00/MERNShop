@@ -19,8 +19,7 @@ const runServer = async () => {
       .listen(port, () => {
         console.log(`> Ready on http://localhost:${port}`)
       })
-
-  } catch(err) {
+  } catch (err) {
     console.log(err)
     process.exit(1)
   }

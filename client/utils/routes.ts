@@ -1,6 +1,6 @@
 export function replaceParametersInPath (entryPath: string, query = {}): string {
   const url = resolveOptionalParameters(Object.entries(query).reduce((resultPath, queryParams) => {
-    const [ key, value ] = queryParams
+    const [key, value] = queryParams
     return resultPath.replace(':' + key, <string>value)
   }, entryPath))
 

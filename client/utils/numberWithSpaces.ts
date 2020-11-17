@@ -1,1 +1,2 @@
-export default (number: number): string => number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")
+const numberWithSpaces = (number: number): string => number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')
+export default numberWithSpaces

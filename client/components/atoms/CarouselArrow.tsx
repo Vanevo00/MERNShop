@@ -25,19 +25,19 @@ const arrowStyle = {
 
 const leftArrowStyle = {
   ...arrowStyle,
-  left: '0',
+  left: '0'
 }
 
 const rightArrowStyle = {
   ...arrowStyle,
-  right: '0',
+  right: '0'
 }
 
 const CarouselArrow = ({ style, pointingLeft, onClick }: Props) => {
   return (
     <div
       className='slick-arrow'
-      style={pointingLeft ? {...style, ...leftArrowStyle} : {...style, ...rightArrowStyle}}
+      style={pointingLeft ? { ...style, ...leftArrowStyle } : { ...style, ...rightArrowStyle }}
       onClick={onClick}
     >
       { pointingLeft ? <LeftArrowImage src='/static/icons/right-arrow.svg' alt='right arrow'/> : <ArrowImage src='/static/icons/right-arrow.svg' alt='left arrow'/> }

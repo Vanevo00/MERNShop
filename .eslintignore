@@ -1,0 +1,13 @@
+node_modules/*
+tsconfig.json
+nodemon.json
+package.json
+package-lock.json
+.eslintrc.json
+README.md
+client/node_modules/*
+client/package.json
+client/package-lock.json
+
+
+
