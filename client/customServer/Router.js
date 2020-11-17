@@ -36,6 +36,7 @@ class Router {
     })
 
     this.router.use(async (error, req, res, next) => {
+      if (error) throw new Error(error)
       const html = await this.renderErrorPage(req, res)
       this.addNoCacheHeader(res)
       res.status(500).send(html)

@@ -32,7 +32,7 @@ const ProductCarousel: FunctionComponent = ({ children }) => {
           slidesToScroll: 1,
           arrows: false
         }
-      },
+      }
     ]
   }
 
