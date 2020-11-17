@@ -1,15 +1,15 @@
 import { Product } from '../models/Product'
 import slugify from 'slugify'
-import { IAddProductArgs, IProduct } from '../types/Product'
+import { IAddProductArgs, IProductDocument } from '../../types/Product'
 
 export class ProductService {
   async find (
-  ): Promise<IProduct[]> {
+  ): Promise<IProductDocument[]> {
     return await Product
       .find({})
   }
 
-  async create (args: IAddProductArgs): Promise<IProduct> {
+  async create (args: IAddProductArgs): Promise<IProductDocument> {
     try {
       const preparedRecipe = this.prepareProductFromArgs(args)
       return await Product.create(preparedRecipe)

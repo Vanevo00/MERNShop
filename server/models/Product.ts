@@ -1,5 +1,5 @@
 import { Schema, model } from 'mongoose'
-import { IProduct } from '../types/Product'
+import { IProductDocument } from '../../types/Product'
 
 const ProductSchema = new Schema({
   name: {
@@ -30,4 +30,4 @@ const ProductSchema = new Schema({
   }
 })
 
-export const Product = model<IProduct>('product', ProductSchema)
+export const Product = model<IProductDocument>('product', ProductSchema)

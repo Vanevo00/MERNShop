@@ -1,6 +1,6 @@
 import { Document } from "mongoose"
 
-export interface IProduct extends Document {
+export interface IProduct {
     name: string
     slug: string
     price: number
@@ -8,6 +8,8 @@ export interface IProduct extends Document {
     updated?: string
     created?: string
 }
+
+export interface IProductDocument extends Document, IProduct {}
 
 export interface IAddProductArgs {
     name: IProduct['name']

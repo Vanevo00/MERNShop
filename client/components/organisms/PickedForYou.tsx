@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import ProductCarousel from '../molecules/ProductCarousel'
 import ProductItem from '../molecules/ProductItem'
 import { mockedJewelry } from '../../common/constants/mocks'
-import { ProductType as ProductItemType } from '../../../types/Product'
+import { IProduct } from '../../../types/Product'
 
 const HeadingContainer = styled(MaxWidthContainer)`
   display: flex;
@@ -30,7 +30,7 @@ const PickedForYou = () => {
         <SectionHeading>Vybráno pro vás</SectionHeading>
         <CarouselContainer>
           <ProductCarousel>
-            {mockedJewelry.map((item: ProductItemType) => <ProductItem item={item} key={item.slug} />)}
+            {mockedJewelry.map((item: IProduct) => <ProductItem item={item} key={item.slug} />)}
           </ProductCarousel>
         </CarouselContainer>
       </HeadingContainer>
