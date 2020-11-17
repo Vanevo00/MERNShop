@@ -4,7 +4,7 @@ import numberWithSpaces from '../../utils/numberWithSpaces'
 import sizes from '../../common/constants/sizes'
 import { RouteLink } from '../atoms/RouteLink'
 import { routes } from '../../common/constants/routes'
-import { ProductItem as ProductItemType } from '../../types/ProductItem'
+import { IProduct } from '../../../types/Product'
 
 const ImageContainer = styled.div`
   max-width: 94%;
@@ -56,7 +56,7 @@ const ProductInfo = styled.div`
 `
 
 interface Props {
-  item: ProductItemType
+  item: IProduct
 }
 
 const ProductItem = ({ item }: Props) => {
