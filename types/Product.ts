@@ -5,6 +5,7 @@ export interface IProduct {
     slug: string
     price: number
     mainImage: string
+    featured?: boolean
     updated?: string
     created?: string
 }
@@ -15,4 +16,5 @@ export interface IAddProductArgs {
     name: IProduct['name']
     price: IProduct['price']
     mainImage: IProduct['mainImage']
+    featured?: IProduct['featured']
 }

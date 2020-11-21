@@ -7,12 +7,17 @@ export default gql`
         slug: String!
         price: Int!
         mainImage: String!
+        featured: Boolean!
         updated: Date!
         created: Date!
     }
 
     extend type Query {
-        getProducts: [Product]
+        getProducts(
+            paginator: Paginator
+            sorting: Sorting
+            filters: FilterProductInput
+        ): [Product]
     }
     
     extend type Mutation {
@@ -20,6 +25,7 @@ export default gql`
             name: String!
             price: Int!
             mainImage: String!
+            featured: Boolean
         ): Product
     }
 `
